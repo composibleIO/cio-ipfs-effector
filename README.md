@@ -8,7 +8,7 @@ cd cio-ipfs-effector
 . build.sh
 ```
 
-Custom effectors may only work in a local network. To whitelist the module add its cid to provider.yaml: 
+Custom effectors may only work in a local network. To whitelist the module add its CID to provider.yaml: 
 
 ```
 nox:
