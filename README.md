@@ -8,10 +8,25 @@ cd cio-ipfs-effector
 . build.sh
 ```
 
-cid = bafkreic43ajmlqhna7xrdadnbkfcsecygl43jmjqajz5xyyhoypfo563qe
+Custom effectors may only work in a local network. To whitelist the module add its cid to provider.yaml: 
+
+```
+nox:
+  effectors:
+    ipfs:
+      wasmCID: <module-cid>
+      allowedBinaries:
+        ipfs: /usr/bin/ipfs
+
+offers:
+    effectors:
+      - <module-cid>
+
+```
 
 how i use it in a project: 
 
 ```
 ln -s ../../cio-ipfs-effector/module <myService>/modules/cio-ipfs-effector
 ```
+

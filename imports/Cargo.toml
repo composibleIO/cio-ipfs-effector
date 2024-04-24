@@ -6,8 +6,7 @@ publish = true
 description = "IPFS Effector Imports"
 license = "Apache-2.0"
 authors = ["Fluence Labs","composible.io"]
-repository = ""
-
+repository = "https://github.com/composibleIO/cio-ipfs-effector"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
