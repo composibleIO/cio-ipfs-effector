@@ -3,7 +3,7 @@ use marine_rs_sdk::marine;
 pub use ipfs_effector_types::*;
 
 #[marine]
-#[module_import("ipfs_effector")]
+#[module_import("cio_ipfs_effector")]
 extern "C" {
     // Upload a file `input_vault_path` to IPFS node with the `api_multiaddr` multiaddress
     pub fn add(api_multiaddr: String, input_vault_path: String) -> IpfsAddResult;

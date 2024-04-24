@@ -1,12 +1,12 @@
 [package]
-name = "ipfs-effector-imports"
+name = "cio-ipfs-effector-imports"
 version = "0.1.1"
 edition = "2021"
 publish = true
 description = "IPFS Effector Imports"
 license = "Apache-2.0"
-authors = ["Fluence Labs"]
-repository = "https://github.com/fluencelabs/ipfs-effector"
+authors = ["Fluence Labs","composible.io"]
+repository = ""
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

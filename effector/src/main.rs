@@ -19,7 +19,7 @@ module_manifest!();
 
 /// Default chunk size for `ipfs add` command to produce stable CIDs.
 const CHUCK_SIZE: usize = 262144;
-const CONNECT_TIMEOUT: usize = 5;
+const CONNECT_TIMEOUT: usize = 30;
 
 pub fn main() {
     WasmLoggerBuilder::new()

@@ -4,7 +4,7 @@ set -o errexit -o nounset -o pipefail
 # set current working directory to script directory to run script from everywhere
 cd "$(dirname "$0")"
 
-EFFECTOR_NAME=ipfs_effector
+EFFECTOR_NAME=cio_ipfs_effector
 
 # This script builds all subprojects and puts all created Wasm modules in one dir
 echo "Building effector module..."
@@ -19,3 +19,5 @@ echo "Resulting CID is $(cat cid/artifacts/cidv1)"
 
 echo "Building the library crates.."
 cargo build --release
+
+cp target/wasm32-wasi/release/$EFFECTOR_NAME.wasm module/$EFFECTOR_NAME.wasm

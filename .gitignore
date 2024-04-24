@@ -17,3 +17,5 @@ Cargo.lock
 .vscode
 .fluence
 cid/artifacts/
+
+module/*.wasm

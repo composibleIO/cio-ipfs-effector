@@ -3,7 +3,7 @@ version: 1
 
 type: rust
 
-name: ipfs_effector
+name: cio_ipfs_effector
 
 effects:
   binaries:
