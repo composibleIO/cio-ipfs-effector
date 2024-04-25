@@ -1,3 +1,5 @@
+bafkreigah7xry6zvb4emyuitfqwvymwxxn7r6j5ypxqwrtt4h4ehasetie
+
 Cloned from https://github.com/fluencelabs/ipfs-effector with minor tweaks: 
 
 * changed CONNECT_TIMEOUT to 30s. 

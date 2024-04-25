@@ -93,3 +93,26 @@ fn get_impl(api_multiaddr: String, cid: String, output_vault_path: &str) -> Resu
     let cmd = make_cmd_args(args, api_multiaddr);
     run_ipfs(cmd).map(drop)
 }
+
+#[marine]
+pub fn hash(api_multiaddr: String, input_vault_path: String) -> IpfsAddResult {
+    hash_impl(api_multiaddr, input_vault_path).into()
+}
+
+fn hash_impl(api_multiaddr: String, input_vault_path: String) -> Result<String> {
+    if !std::path::Path::new(&input_vault_path).exists() {
+        return Err(eyre!("path {} doesn't exist", input_vault_path));
+    }
+
+    let input_vault_path = inject_vault(&input_vault_path)?;
+    let args = vec![
+        String::from("add"),
+        String::from("-Q"),
+        input_vault_path,
+        String::from("--cid-version=1"),
+        format!("--chunker=size-{}", CHUCK_SIZE),
+        String::from("--only-hash"),
+    ];
+    let cmd = make_cmd_args(args, api_multiaddr);
+    run_ipfs(cmd).map(|res| res.trim().to_string())
+}
