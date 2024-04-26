@@ -12,5 +12,5 @@ extern "C" {
     pub fn get(api_multiaddr: String, cid: String, output_vault_path: &str) -> IpfsResult;
 
     // Downloads a file by `cid` to the `output_vault_path` file from IPFS node with the `api_multiaddr` multiaddress
-    pub fn hash(api_multiaddr: String, cid: String, output_vault_path: &str) -> IpfsResult;
+    pub fn hash(api_multiaddr: String, input_vault_path: String) -> IpfsAddResult;
 }
