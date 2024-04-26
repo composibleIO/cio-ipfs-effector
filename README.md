@@ -1,8 +1,9 @@
-bafkreigah7xry6zvb4emyuitfqwvymwxxn7r6j5ypxqwrtt4h4ehasetie
+bafkreicrfikfredxsxi2ikyh55eg43kgzgbgakskhdpse3pp4kcxkaq3yu
 
 Cloned from https://github.com/fluencelabs/ipfs-effector with minor tweaks: 
 
 * changed CONNECT_TIMEOUT to 30s. 
+* added hash-only function, which could be useful when comparing contents in vaults between peers without overloading ipfs node.
 * extended build.sh to copy wasm file into a folder with a module.yaml file .. so it can be included in a project
 
 ```

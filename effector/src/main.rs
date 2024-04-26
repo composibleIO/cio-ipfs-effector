@@ -10,7 +10,6 @@ use eyre::{eyre, Result};
 use ipfs_effector_types::*;
 use marine_rs_sdk::marine;
 use marine_rs_sdk::module_manifest;
-use marine_rs_sdk::WasmLoggerBuilder;
 
 use crate::import::ipfs;
 use crate::utils::inject_vault;
@@ -22,10 +21,6 @@ const CHUCK_SIZE: usize = 262144;
 const CONNECT_TIMEOUT: usize = 30;
 
 pub fn main() {
-    WasmLoggerBuilder::new()
-        .with_log_level(log::LevelFilter::Debug)
-        .build()
-        .unwrap();
 }
 
 /// Run `ipfs` mounted binary with the specified arguments
@@ -108,10 +103,11 @@ fn hash_impl(api_multiaddr: String, input_vault_path: String) -> Result<String> 
     let args = vec![
         String::from("add"),
         String::from("-Q"),
+        String::from("-r"),
         input_vault_path,
         String::from("--cid-version=1"),
         format!("--chunker=size-{}", CHUCK_SIZE),
-        String::from("--only-hash"),
+        String::from("--only-hash")
     ];
     let cmd = make_cmd_args(args, api_multiaddr);
     run_ipfs(cmd).map(|res| res.trim().to_string())
