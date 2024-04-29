@@ -63,6 +63,7 @@ fn add_impl(api_multiaddr: String, input_vault_path: String) -> Result<String> {
     let args = vec![
         String::from("add"),
         String::from("-Q"),
+        String::from("-r"), 
         input_vault_path,
         String::from("--cid-version=1"),
         format!("--chunker=size-{}", CHUCK_SIZE),

@@ -1,4 +1,4 @@
-bafkreicrfikfredxsxi2ikyh55eg43kgzgbgakskhdpse3pp4kcxkaq3yu
+bafkreifwz7ia6otb3czodw62hnpvvgnd2wezo4mp27x3vove4ubrtavida
 
 Cloned from https://github.com/fluencelabs/ipfs-effector with minor tweaks: 
 
